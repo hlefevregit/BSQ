@@ -6,7 +6,7 @@
 /*   By: hulefevr <hulefevr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/03 17:40:04 by hulefevr          #+#    #+#             */
-/*   Updated: 2024/04/03 17:46:28 by hulefevr         ###   ########.fr       */
+/*   Updated: 2024/04/03 18:01:51 by hulefevr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,13 +45,13 @@ t_game	game_check_fullempty(t_game game)
 		while (game.cpy[i])
 		{
 			j = 0;
-			while (game.cpy[i][j])
+			while (j < ft_atoi(game.type.nb))
 			{
 				game.cpy[i][j] = game.type.fill;
 				j++;
-			}
+			}	
+			i++;
 		}
-		i++;
 	}
 	return (game);
 }
