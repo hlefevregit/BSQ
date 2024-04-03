@@ -6,7 +6,7 @@
 /*   By: hulefevr <hulefevr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/03 12:14:33 by hulefevr          #+#    #+#             */
-/*   Updated: 2024/04/03 17:43:33 by hulefevr         ###   ########.fr       */
+/*   Updated: 2024/04/03 18:08:34 by hulefevr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,14 +37,14 @@ typedef struct s_type
 
 typedef struct s_game
 {
-	char 	**map;
+	char	**map;
 	char	**cpy;
 	char	*info;
 	t_type	type;
 	t_pos	**obstacle;
 }		t_game;
 
-t_game  check_errors(t_game game);
+t_game	check_errors(t_game game);
 t_game	get_obstacle_pos(t_game game);
 t_game	game_check_fullempty(t_game game);
 
@@ -62,6 +62,5 @@ int		ft_obstacle_nb(t_game game);
 void	ft_putstr_fd(char *str, int fd);
 void	print_map(t_game game);
 void	ft_putchar_fd(char c, int fd);
-
 
 #endif

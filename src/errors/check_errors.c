@@ -6,7 +6,7 @@
 /*   By: hulefevr <hulefevr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/03 13:02:15 by hulefevr          #+#    #+#             */
-/*   Updated: 2024/04/03 17:17:01 by hulefevr         ###   ########.fr       */
+/*   Updated: 2024/04/03 18:10:17 by hulefevr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,10 +29,10 @@ t_game	check_info(t_game game)
 	game.type.empty = game.info[i];
 	game.type.obstacle = game.info[i + 1];
 	game.type.fill = game.info[i + 2];
-	if (game.info[i] == game.info[i + 1] ||
-		game.info[i] == game.info[i + 2] ||
-		game.info[i + 1] == game.info[i + 2])
-			ft_strerror("map error\n");
+	if (game.info[i] == game.info[i + 1]
+		|| game.info[i] == game.info[i + 2]
+		|| game.info[i + 1] == game.info[i + 2])
+		ft_strerror("map error\n");
 	return (game);
 }
 
@@ -77,7 +77,7 @@ int	check_good_char(t_game game)
 	return (1);
 }
 
-t_game  check_errors(t_game game)
+t_game	check_errors(t_game game)
 {
 	game = check_info(game);
 	if (check_len(game.map) == 0)

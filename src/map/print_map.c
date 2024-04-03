@@ -6,7 +6,7 @@
 /*   By: hulefevr <hulefevr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/03 15:40:42 by hulefevr          #+#    #+#             */
-/*   Updated: 2024/04/03 17:43:55 by hulefevr         ###   ########.fr       */
+/*   Updated: 2024/04/03 18:10:29 by hulefevr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	print_map(t_game game)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (game.cpy[i])

@@ -6,7 +6,7 @@
 /*   By: hulefevr <hulefevr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/03 12:14:18 by hulefevr          #+#    #+#             */
-/*   Updated: 2024/04/03 17:39:51 by hulefevr         ###   ########.fr       */
+/*   Updated: 2024/04/03 18:07:45 by hulefevr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	start_game(t_game game)
 
 void	bsq(char *map)
 {
-	t_game game;
+	t_game	game;
 	int		fd;
 	int		size;
 	char	*buf;

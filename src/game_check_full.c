@@ -6,7 +6,7 @@
 /*   By: hulefevr <hulefevr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/03 17:40:04 by hulefevr          #+#    #+#             */
-/*   Updated: 2024/04/03 18:01:51 by hulefevr         ###   ########.fr       */
+/*   Updated: 2024/04/03 18:10:04 by hulefevr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ t_game	game_check_fullempty(t_game game)
 			{
 				game.cpy[i][j] = game.type.fill;
 				j++;
-			}	
+			}
 			i++;
 		}
 	}
