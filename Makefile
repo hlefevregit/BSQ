@@ -6,7 +6,7 @@
 #    By: hulefevr <hulefevr@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/03 12:51:24 by hulefevr          #+#    #+#              #
-#    Updated: 2024/04/03 17:44:24 by hulefevr         ###   ########.fr        #
+#    Updated: 2024/04/03 18:38:11 by hulefevr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,6 +20,7 @@ BIN = bsq
 
 SRC = 	./src/bsq.c \
 		./src/game_check_full.c \
+		./src/algo.c \
 		./src/map/get_map.c \
 		./src/map/print_map.c \
 		./src/errors/check_errors.c \

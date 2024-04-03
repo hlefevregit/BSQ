@@ -6,7 +6,7 @@
 /*   By: hulefevr <hulefevr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/03 12:14:18 by hulefevr          #+#    #+#             */
-/*   Updated: 2024/04/03 18:07:45 by hulefevr         ###   ########.fr       */
+/*   Updated: 2024/04/03 18:37:52 by hulefevr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	start_game(t_game game)
 {
 	game = check_errors(game);
 	game = game_check_fullempty(game);
-	//algo_game(game);      //---------------------------- POUR TON ALGO
+	game = draw_squares_scan(game);
 	print_map(game);
 }
 

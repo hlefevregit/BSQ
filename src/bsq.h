@@ -6,7 +6,7 @@
 /*   By: hulefevr <hulefevr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/03 12:14:33 by hulefevr          #+#    #+#             */
-/*   Updated: 2024/04/03 18:08:34 by hulefevr         ###   ########.fr       */
+/*   Updated: 2024/04/03 18:37:34 by hulefevr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,7 @@ typedef struct s_game
 t_game	check_errors(t_game game);
 t_game	get_obstacle_pos(t_game game);
 t_game	game_check_fullempty(t_game game);
+t_game	draw_squares_scan(t_game game);
 
 char	**ft_split(char *s, char c);
 char	**get_map(char **buf);
