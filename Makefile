@@ -6,7 +6,7 @@
 #    By: hulefevr <hulefevr@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/03 12:51:24 by hulefevr          #+#    #+#              #
-#    Updated: 2024/04/03 16:17:07 by hulefevr         ###   ########.fr        #
+#    Updated: 2024/04/03 17:44:24 by hulefevr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,6 +19,7 @@ BIN = bsq
 #SRC = $(wildcard *.c)
 
 SRC = 	./src/bsq.c \
+		./src/game_check_full.c \
 		./src/map/get_map.c \
 		./src/map/print_map.c \
 		./src/errors/check_errors.c \

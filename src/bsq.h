@@ -6,7 +6,7 @@
 /*   By: hulefevr <hulefevr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/03 12:14:33 by hulefevr          #+#    #+#             */
-/*   Updated: 2024/04/03 16:29:18 by hulefevr         ###   ########.fr       */
+/*   Updated: 2024/04/03 17:43:33 by hulefevr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,10 +41,12 @@ typedef struct s_game
 	char	**cpy;
 	char	*info;
 	t_type	type;
-	t_pos	obstacle;
+	t_pos	**obstacle;
 }		t_game;
 
 t_game  check_errors(t_game game);
+t_game	get_obstacle_pos(t_game game);
+t_game	game_check_fullempty(t_game game);
 
 char	**ft_split(char *s, char c);
 char	**get_map(char **buf);
@@ -55,6 +57,7 @@ int		ft_strlen(char *str);
 int		ft_tablen(char **tab);
 int		ft_atoi(char *str);
 int		ft_strerror(char *str);
+int		ft_obstacle_nb(t_game game);
 
 void	ft_putstr_fd(char *str, int fd);
 void	print_map(t_game game);

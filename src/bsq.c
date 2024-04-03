@@ -6,7 +6,7 @@
 /*   By: hulefevr <hulefevr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/03 12:14:18 by hulefevr          #+#    #+#             */
-/*   Updated: 2024/04/03 16:30:41 by hulefevr         ###   ########.fr       */
+/*   Updated: 2024/04/03 17:39:51 by hulefevr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,8 @@
 void	start_game(t_game game)
 {
 	game = check_errors(game);
-	print_map(game);
-	//game = get_obstacle_pos(game);
-	//algo_game(game);
+	game = game_check_fullempty(game);
+	//algo_game(game);      //---------------------------- POUR TON ALGO
 	print_map(game);
 }
 

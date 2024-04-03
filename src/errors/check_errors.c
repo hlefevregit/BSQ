@@ -6,7 +6,7 @@
 /*   By: hulefevr <hulefevr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/03 13:02:15 by hulefevr          #+#    #+#             */
-/*   Updated: 2024/04/03 16:28:41 by hulefevr         ###   ########.fr       */
+/*   Updated: 2024/04/03 17:17:01 by hulefevr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,10 +81,10 @@ t_game  check_errors(t_game game)
 {
 	game = check_info(game);
 	if (check_len(game.map) == 0)
-		ft_strerror("map error\n");
+		ft_strerror("map error 3\n");
 	if (check_good_char(game) == 0)
-		ft_strerror("map error\n");
+		ft_strerror("map error 2 \n");
 	if (ft_tablen(game.map) != ft_atoi(game.type.nb))
-		ft_strerror("map error\n");
+		ft_strerror("map error 1\n");
 	return (game);
 }
