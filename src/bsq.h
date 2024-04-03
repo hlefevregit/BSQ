@@ -6,7 +6,7 @@
 /*   By: hulefevr <hulefevr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/03 12:14:33 by hulefevr          #+#    #+#             */
-/*   Updated: 2024/04/03 12:54:16 by hulefevr         ###   ########.fr       */
+/*   Updated: 2024/04/03 16:29:18 by hulefevr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,18 +21,44 @@
 # include <stdlib.h>
 # include <stdio.h>
 
+typedef struct s_pos
+{
+	int	x;
+	int	y;
+}		t_pos;
+
+typedef struct s_type
+{
+	char	empty;
+	char	obstacle;
+	char	fill;
+	char	*nb;
+}		t_type;
+
 typedef struct s_game
 {
-	int		error;
 	char 	**map;
+	char	**cpy;
 	char	*info;
+	t_type	type;
+	t_pos	obstacle;
 }		t_game;
 
-char	**ft_split(const char *s, char c);
+t_game  check_errors(t_game game);
+
+char	**ft_split(char *s, char c);
+char	**get_map(char **buf);
 
 char	*ft_strdup(char *src);
 
 int		ft_strlen(char *str);
 int		ft_tablen(char **tab);
+int		ft_atoi(char *str);
+int		ft_strerror(char *str);
+
+void	ft_putstr_fd(char *str, int fd);
+void	print_map(t_game game);
+void	ft_putchar_fd(char c, int fd);
+
 
 #endif

@@ -1,33 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   get_map.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hulefevr <hulefevr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/03 12:43:06 by hulefevr          #+#    #+#             */
-/*   Updated: 2024/04/03 12:54:22 by hulefevr         ###   ########.fr       */
+/*   Created: 2024/04/03 14:30:00 by hulefevr          #+#    #+#             */
+/*   Updated: 2024/04/03 14:30:31 by hulefevr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "bsq.h"
+#include "../bsq.h"
 
-int	ft_strlen(char *str)
+char	**get_map(char **buf)
 {
-	int	i;
+	int		i;
+	char	**ret;
 
-	i = 0;
-	while (str[i])
+	i = 1;
+	ret = (char **)malloc(sizeof(char *) * ft_tablen(buf));
+	while (buf[i])
+	{
+		ret[i - 1] = ft_strdup(buf[i]);
 		i++;
-	return (i);
-}
-
-int	ft_tablen(char **tab)
-{
-	int	i;
-
-	i = 0;
-	while (tab[i])
-		i++;
-	return (i);
+	}
+	return (ret);
 }

@@ -6,13 +6,13 @@
 /*   By: hulefevr <hulefevr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/03 12:37:11 by hulefevr          #+#    #+#             */
-/*   Updated: 2024/04/03 12:37:45 by hulefevr         ###   ########.fr       */
+/*   Updated: 2024/04/03 15:05:53 by hulefevr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "bsq.h"
+#include "../bsq.h"
 
-int	ft_wrdcnt(const char *s, char c)
+int	ft_wrdcnt(char *s, char c)
 {
 	int	wrd;
 	int	i;
@@ -32,7 +32,7 @@ int	ft_wrdcnt(const char *s, char c)
 	return (wrd);
 }
 
-char	*ft_getwrd(const char *s, char c, int *i)
+char	*ft_getwrd(char *s, char c, int *i)
 {
 	char	*d;
 	int		k;
@@ -53,7 +53,7 @@ char	*ft_getwrd(const char *s, char c, int *i)
 	return (d);
 }
 
-char	**ft_split(const char *s, char c)
+char	**ft_split(char *s, char c)
 {
 	int		i;
 	int		j;

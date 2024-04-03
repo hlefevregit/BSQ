@@ -6,32 +6,19 @@
 /*   By: hulefevr <hulefevr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/03 12:14:18 by hulefevr          #+#    #+#             */
-/*   Updated: 2024/04/03 13:17:52 by hulefevr         ###   ########.fr       */
+/*   Updated: 2024/04/03 16:30:41 by hulefevr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "bsq.h"
 
-char	**get_map(char **buf)
-{
-	int		i;
-	char	**ret;
-
-	i = 1;
-	ret = (char **)malloc(sizeof(char *) * ft_tablen(buf));
-	while (buf[i])
-	{
-		ret[i - 1] = ft_strdup(buf[i]);
-		i++;
-	}
-	return (ret);
-}
-
 void	start_game(t_game game)
 {
-	check_errors(game);
-	if (game.error == 1)
-		return ;
+	game = check_errors(game);
+	print_map(game);
+	//game = get_obstacle_pos(game);
+	//algo_game(game);
+	print_map(game);
 }
 
 void	bsq(char *map)
@@ -42,26 +29,40 @@ void	bsq(char *map)
 	char	*buf;
 	char	**string;
 
+	buf = malloc(sizeof(char) * (BUFSIZ + 1));
 	fd = open(map, O_RDONLY);
-	if (fd == -1)
+	if (fd != -1)
 	{
-		ft_putstr_fd("Error\n");
-		return ;
+		size = read(fd, buf, BUFSIZ);
+		if (size != -1)
+		{
+			string = ft_split(buf, '\n');
+			game.info = string[0];
+			game.map = get_map(string);
+			game.cpy = get_map(string);
+			start_game(game);
+		}
+		else
+			ft_putstr_fd("Error\n", 2);
 	}
-	size = read(fd, buf, BUFSIZ);
-	string = ft_split(buf, '\n');
-	game.info = string[0];
-	game.map = get_map(string);
-	start_bsq(game);	
+	else
+		ft_putstr_fd("Error\n", 2);
 }
 
 int	main(int ac, char **av)
 {
 	int	i;
 
+	i = 1;
+	if (ac == 1)
+	{
+		ft_putstr_fd("Error\n", 2);
+		return (0);
+	}
 	while (i < ac)
 	{
 		bsq(av[i]);
 		i++;
 	}
+	return (0);
 }
